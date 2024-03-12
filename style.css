@@ -1,0 +1,407 @@
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0 auto;
+}
+
+#bb{
+  display: none;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+
+  background-color: black;
+  opacity: 0.4;
+
+  z-index: 1;
+}
+
+.popup-title{
+  text-align: center;
+  margin-top: 1vh;
+  font-size: 2rem;
+}
+
+/* index page */
+
+header{
+  display: flex;
+
+  height: 10vh;
+  
+  background-color: rgb(19, 32, 80);
+
+  color: white;
+  border-bottom: solid 3px;
+  border-color: rgb(251, 176, 60);
+}
+
+.user-cont{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 10vh;
+
+  position: absolute;
+  right: 0;
+}
+
+.login-img{
+  height: 7vh;
+  width: 7vh;
+  transition: 0.2s;
+}
+
+.login-text{
+  height: auto;
+  text-align: center;
+}
+
+.loggedinn-cont{
+  display: none;
+  gap: 2vw;
+  align-items: center;
+  justify-content: center;
+
+  position: absolute;
+  right: 0;
+  height: 10vh;
+
+  margin-right: 1vw;
+}
+
+.loggedinn-cont > div{
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.loggedinn-cont > div:hover{
+  color: red;
+}
+
+.login-img:hover{
+  opacity: 0.6;
+}
+
+.login-img:active{
+  opacity: 1;
+}
+
+nav{
+  height: 10vh;
+  display: flex;
+
+  grid-auto-columns: 20vw;
+
+  font-size: 2rem;
+  background-color: rgb(19, 32, 80);
+}
+
+nav > div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 98%;
+  width: 100%;
+  transition: 0.4s;
+
+  cursor: pointer;
+  border: solid black 1px;
+}
+
+nav > div:hover{
+  box-shadow: 0px 2px 8px 0px;
+  
+}
+
+.user-img{
+  height: 20vh;
+  opacity: 0.7;
+}
+
+.main-cont{
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+
+  height: 90vh;
+  gap: 2vh;
+  background-image: url("img/background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.main-cont > button{
+  width: 50vw;
+  height: 8vh;
+  font-size: 2rem;
+
+  background-color: rgb(19, 32, 80);
+  border-radius: 10px;
+  color: white;
+  border: solid 3px;
+  border-color: rgb(251, 176, 60);
+}
+
+/* jobb nå */
+
+.list-cont{
+  display: block;
+  position: absolute;
+  right: 0;
+
+  width: 30vw;
+  height: 90%;
+
+  bottom: 0;
+
+  background-color: #c4c4c4;
+  overflow-y: auto;
+}
+
+.l-card{
+  display: flex;
+  align-items: center;
+  gap: 2vw;
+  margin-bottom: 1vh;
+  margin-left: 2vw;
+  margin-top: 1vh;
+
+  width: 25vw;
+  height: 10vh;
+
+  text-align: center;
+  background-color: #666;
+  transition: 0.5s;
+}
+
+.l-card:hover{
+  box-shadow: 0px 2px 8px 0px;
+}
+
+.l-filter{
+  margin-bottom: 1vh;
+  margin-left: 2vw;
+  margin-top: 1vh;
+
+  width: 25vw;
+  height: 5vh;
+
+  font-size: 1.5rem;
+}
+
+@media only screen and (min-width: 1201px) {
+  .l-title{
+    font-size: 1rem;
+  }
+  
+  .l-price{
+    font-size: 2rem;
+    text-decoration: underline;
+  }
+  
+  .l-employerPic{
+    position: absolute;
+    right: 3vw;
+    height: 10vh;
+  }  
+}
+
+@media only screen and (max-width: 1200px) {
+  .l-title{
+    font-size: 1rem;
+  }
+
+  .l-price{
+    font-size: 1.5rem;
+    text-decoration: underline;
+  }
+
+  .l-employerPic{
+    position: absolute;
+    right: 3vw;
+    height: 6vh;
+  }
+}
+
+#map1{
+  position: absolute;
+  display: block;
+
+  width: 70vw;
+  height: 90vh;
+
+  bottom: 0;
+  box-shadow: 0px 2px 8px 0px;
+}
+
+/* tilby jobb */
+
+.info-cont{
+  position: absolute;
+  width: 33vw;
+  height: 90vh;
+  left: 0;
+  bottom: 0;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.ic-navn{
+  width: 95%;
+  height: 10%;
+  font-size: 3rem;
+}
+
+.ic-besk{
+  width: 95%;
+  height: 90%;
+  font-size: 1.8rem;
+}
+
+.kontakt-cont{
+  position: absolute;
+  width: 33vw;
+  height: 90vh;
+  right: 50%;
+  transform: translate(50%);
+
+  bottom: 0;
+}
+
+.kc-kontakt{
+  display: flex;
+  width: 90%;
+  height: 20%;
+  align-items: center;
+  justify-content: center;
+
+  margin-top: 5%;
+  margin-bottom: 5%;
+
+  border: solid black 1px;
+}
+
+.kc-kontakt > img{
+  position: absolute;
+  right: 0;
+  transform: translate(-30%);
+  height: 18vh;
+}
+
+.kc-info{
+  display: flex;
+  flex-direction: column;
+  height: 50%;
+  width: 90%;
+  
+  border: 1px solid black;
+}
+
+.kc-info > input{
+  height: 25%;
+}
+
+.kc-utbetalt{
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 5%;
+
+  display: flex;
+  width: 90%;
+  height: 10%;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 2rem;
+}
+
+.map-cont{
+  position: absolute;
+  width: 33vw;
+  height: 90vh;
+  right: 0;
+
+  bottom: 0;
+}
+
+.mc-address{
+  height: 10%;
+  font-size: 8vh;
+  text-align: center;
+}
+
+#map2{
+  display: block;
+
+  width: 100%;
+  height: 80%;
+}
+
+.mc-publiser{
+  width: 100%;
+  height: 10%;
+}
+
+/* venner */
+
+.venner-cont{
+  display: none;
+  position: absolute;
+
+  width: 60vw;
+  height: 70vh;
+
+  right: 50%;
+  bottom: 50%;
+  transform: translate(50%, 50%);
+
+  background-color: white;
+  z-index: 2;
+  box-shadow: 0px 2px 8px 0px;
+}
+
+.close-venner{
+  position: absolute;
+  right: 0;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+/* mine jobber */
+
+.minejobber-cont{
+  display: none;
+  position: absolute;
+
+  width: 60vw;
+  height: 70vh;
+
+  right: 50%;
+  bottom: 50%;
+  transform: translate(50%, 50%);
+
+  background-color: white;
+  z-index: 2;
+  box-shadow: 0px 2px 8px 0px;
+}
+
+.minejobber-close{
+  position: absolute;
+  right: 0;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+/* js */
+
+.popupMsg{
+  transform: translate(50%, 50%);
+}
+
+.closeCont{
+  cursor: pointer;
+}

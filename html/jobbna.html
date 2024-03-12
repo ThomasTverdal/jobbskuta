@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../style.css">
+  <script defer src="../app.js"></script>
+  <script defer src="../filter.js"></script>
+  <link rel="shortcut icon" href="../img/favicon.png" type="image/x-icon">
+</head>
+<body>
+  <div id="bb"></div>
+
+  <div class="venner-cont">
+    <div onclick="close_venner()" class="close-venner">X</div>
+
+    <div class="popup-title">Venner</div>
+  </div>
+
+  <div class="minejobber-cont">
+    <div onclick="close_minejobber()" class="minejobber-close">X</div>
+
+    <div class="popup-title">Mine Jobber</div>
+  </div>
+
+  <header>
+    <nav>
+      <div onclick="window.location.replace('../html/index.html')">Hjemmeside</div>
+    </nav>
+    <div class="user-cont">
+      <img src="../img/profile/profile_icon.png" class="login-img"></img>
+      <div>Log inn</div>
+    </div>    
+    <div class="loggedinn-cont">
+      <div onclick="open_venner()">Venner</div>
+      <div onclick="open_mineJobber()">Mine Jobber</div>
+      <div onclick="logout()">Logg ut</div>
+    </div>
+  </header>
+  
+  <section class="list-cont">
+
+    <input type="text" class="l-filter" id="input-filter" onkeyup="filter()" placeholder="Søk på job...">
+
+    <div class="l-card" onclick="view_info(0)">
+      <div class="l-title"">Jobb 1</div>
+      <div class="l-price">100</div>
+      <img src="../img/profile/profile_icon.png" alt="" class="l-employerPic">
+    </div>
+
+    <div class="l-card" onclick="view_info(1)">
+      <div class="l-title">Jobb 2</div>
+      <div class="l-price">100</div>
+      <img src="../img/profile/profile_icon.png" alt="" class="l-employerPic">
+    </div>
+
+    <div class="l-card" onclick="view_info(2)">
+      <div class="l-title">Jobb 3</div>
+      <div class="l-price">100</div>
+      <img src="../img/profile/profile_icon.png" alt="" class="l-employerPic">
+    </div>
+
+    <div class="l-card" onclick="view_info(3)">
+      <div class="l-title">Jobb 4</div>
+      <div class="l-price">100</div>
+      <img src="../img/profile/profile_icon.png" alt="" class="l-employerPic">
+    </div>
+
+    <div class="l-card" onclick="view_info(4)">
+      <div class="l-title">Jobb 5</div>
+      <div class="l-price">100</div>
+      <img src="../img/profile/profile_icon.png" alt="" class="l-employerPic">
+    </div>
+  </section>
+  <div id="map1"></div>
+
+  <!-- prettier-ignore -->
+  <script>(g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})
+      ({key: "AIzaSyCFQX-xnVuQ66L1dvn0qVzmGz9vKs7jlHE", v: "weekly"});</script>
+
+  <script src="../map.js"></script>
+</body>
+</html>
