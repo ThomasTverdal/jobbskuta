@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../style.css">
+  <script defer src="../app.js"></script>
+  <link rel="shortcut icon" href="../img/favicon.png" type="image/x-icon">
+</head>
+<body id="shipBG">
+
+  <div class="venner-cont">
+    <div onclick="close_venner()" class="close-venner">X</div>
+
+    <div class="popup-title">Venner</div>
+  </div>
+
+  <div class="minejobber-cont">
+    <div onclick="close_minejobber()" class="minejobber-close">X</div>
+
+    <div class="popup-title">Mine Jobber</div>
+  </div>
+
+  <header>
+    <nav>
+      <div onclick="window.location.replace('../index.html')">Hjemmeside</div>
+    </nav>
+    <div class="user-cont">
+      <img src="../img/profile/profile_icon.png" class="login-img"></img>
+      <div>Log inn</div>
+    </div>    
+    <div class="loggedinn-cont">
+      <div onclick="open_venner()">Venner</div>
+      <div onclick="open_mineJobber()">Mine Jobber</div>
+      <div onclick="logout()">Logg ut</div>
+    </div>
+  </header>
+  
+  <section class="main-cont">
+    <button onclick="window.location='../html/jobbna.html'">Jobb nå</button>
+    <button onclick="window.location='../html/tilbyjobb.html'">Tilby jobb</button>
+  </section>
+</body>
+</html>
